@@ -65,7 +65,13 @@
 		<?php
 			include "header.php";
 		?>
-		<section class="dash">
+		<section>
+			<h2>Formulate</h2>
+			<p>Formulate is a content management system for Formulae which utilises the power of the FormulaeView framework to create, read, edit, manage and deploy Formulae content. Below you can find the version log, showing entries for each new update to the system.</p>
+			<p>Enjoy!</p>
+			<p>Philipp Grozinger<br/>Formulate Developer</p>
+		</section>
+		<section>
 			<div class="noticeBoardControls">
 				<table>
 					<tr>
@@ -73,8 +79,8 @@
 							<h3>Version Log</h3>
 						</td>
 						<td class="noticeBoardc nopadding">
-							<button class='button' onClick="noticeRequest('1', 'new', '', '0');">New</button>
-							<button class='button' onClick="noticeRequest('0', '');">Refresh</button>
+							<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Version</button>
+							<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
 						</td>
 					</tr>
 				</table>

@@ -4,6 +4,15 @@
 <html>
 <body>
 	<?php
+		if (isset($_SESSION["logged"])){
+			if ($_SESSION["logged"]){
+				// if there is already someone logged in, define the functions below
+			}
+			else {
+				echo "<script type='text/javascript'>window.location='signin.php';</script>";
+				die();
+			}
+		}
 		date_default_timezone_set('Australia/Adelaide');
 		$z = 0;
 		$notices = array();

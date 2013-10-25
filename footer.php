@@ -1,5 +1,5 @@
 <html>
 	<footer>
-		<p>&copy GRAPHITE 2013</p>
+		<p><span class="icon">b</span> Formulate &copy GRAPHITE 2013</p>
 	</footer>
 </html>

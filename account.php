@@ -19,7 +19,8 @@
 			include "header.php";
 		?>
 		<section class="account">
-			<h2>Your Account</h2>
+			<h2>Account</h2>
+			<p>Below is the all the information that is tied to your account.</p>
 			<table class="table account">
 				<tr>
 					<td>Username</td><td><?php echo $_SESSION["user"] ?></td>
@@ -28,6 +29,9 @@
 					<td>Name</td><td><?php echo $_SESSION["peep"] ?></td>
 				</tr>
 			</table>
+		</section>
+		<section>
+			<a class="button danger icon lock" href="change-pass.php">Change Password</a>
 		</section>
 		<?php
 			include "footer.php";

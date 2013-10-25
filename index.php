@@ -67,6 +67,9 @@
 		?>
 		<section class="dash">
 			<h2>Dashboard</h2>
+			<button class="button icon add">New</button>
+		</section>
+		<section>
 			<div class="noticeBoardControls">
 				<table>
 					<tr>
@@ -74,8 +77,8 @@
 							<h3>Noticeboard</h3>
 						</td>
 						<td class="noticeBoardc nopadding">
-							<button class='button' onClick="noticeRequest('1', 'new', '', '0');">New</button>
-							<button class='button' onClick="noticeRequest('0', '');">Refresh</button>
+							<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Post</button>
+							<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
 						</td>
 					</tr>
 				</table>

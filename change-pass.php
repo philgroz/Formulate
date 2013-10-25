@@ -9,13 +9,7 @@
 <html>
 	<head>
 		<?php
-			// LOGIN
-			if (isset($_SESSION["logged"])){
-				if ($_SESSION["logged"]){
-					echo "<script type='text/javascript'>window.location='index.php';</script>";
-					die();
-				}
-			}
+			include "formulate.php";
 			include "head.php";
 		?>
 		<title>Formulate | Sign In</title>
@@ -26,32 +20,40 @@
 		?>
 		<section>
 			<div class="login">
-				<form action="login.php" method="post">
+				<form action="change-pass-action.php" method="post">
 				<table>
 					<tr>
 						<td colspan="2">
-							<h3>Sign In</h3>
+							<h3>Change your Password</h3>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<label>Username</label>
-						</td>
-						<td>
-							<input name="user" type="text" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label>Password</label>
+							<label>Current Password</label>
 						</td>
 						<td>
 							<input name="pass" type="password" />
 						</td>
 					</tr>
 					<tr>
+						<td>
+							<label>New Password</label>
+						</td>
+						<td>
+							<input name="new" type="password" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Confirm New Password</label>
+						</td>
+						<td>
+							<input name="new2" type="password" />
+						</td>
+					</tr>
+					<tr>
 						<td colspan="2">
-							<input type="submit" class="button big" />
+							<input type="submit" value="Change Password" class="button big danger" />
 						</td>
 					</tr>
 				</table>

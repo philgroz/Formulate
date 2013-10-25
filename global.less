@@ -2,7 +2,9 @@
 /* Grozinger P */
 /* Formulate v1.0 */
 
-@font-face {font-family: kefa; src: url('fonts/Kefa.ttc');}			
+@font-face {font-family: kefa; src: url('fonts/Kefa.ttc');}		
+@font-face {font-family: graphite; src: url('fonts/GRAPHITE.ttf');}			
+	
 
 body {
 	width: 800px;
@@ -15,6 +17,10 @@ body {
 	background: #ffffff;
 }
 
+span.icon {
+	font-family: graphite;
+}
+
 h1 {
 	font-size:30px;
 	font-family:kefa;
@@ -22,7 +28,7 @@ h1 {
 }
 h2 {
 	font-size:30px;
-	margin: 20px 0px !important;
+	margin: 15px 0px !important;
 }
 h3 {
 	font-size:20px;
@@ -48,8 +54,21 @@ a {
 div.login {
 	width:300px;
 	margin:100px auto;
-	background: #e0e0e0;
-	padding:50px;
+	background: #f2f2f2;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	padding:20px 40px;
+	td {
+		text-align: center;
+		padding:10px 0px;
+	}
+}
+form {
+	margin: 0px;
+}
+
+section p {
+	margin: 1em 1px;
 }
 
 header {
@@ -102,11 +121,13 @@ input {
 
 table {width: 100%; border-collapse:collapse;}
 .noticeBoardControls {
+	border-radius: 3px 3px 0px 0px;
 	td {width:50%; border-collapse:collapse; text-align: left;}
 	td:last-child {text-align: right;}
 }
 table.table {
 	background: #f2f2f2;
+	font-family: courier;
 	border: 1px solid #dddddd;
 	font-size: 12px;
 	td {
@@ -117,6 +138,7 @@ table.table {
 table.account.table {
 	td:first-child {
 		width: 15%;
+		text-align: center;
 	}
 	td:last-child {
 		width: 85%;
