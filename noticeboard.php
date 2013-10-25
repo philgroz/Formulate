@@ -127,7 +127,7 @@
 					if ($xml->author == $_SESSION['peep']){
 						echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 					}
-					echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+					echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 					echo "<p>".$xml->text."</p>";
 					writeComments($xml);
 					global $z;
@@ -184,7 +184,7 @@
 						if ($xml->author == $_SESSION['peep']){
 							echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 						}
-						echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+						echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 						echo "<p>".$xml->text."</p>";
 						writeComments($xml);
 						$z++;
@@ -238,7 +238,7 @@
 					if ($xml->author == $_SESSION['peep']){
 						echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 					}
-					echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+					echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 					echo "<p>".$xml->text."</p>";
 					$x = "0";
 					if ($xml->comments == "1"){
@@ -286,7 +286,7 @@
 					if ($_POST['save'] == $xml->nin && $x == "0"){
 						echo '<p>Post Comment</p>';
 						echo '<textarea name="ctext" id="ctext" class="textField paragraph newNotice" wrap="virtual" rows="3"></textarea>';
-						echo "<div><button class='button' onClick='".'noticeRequest("5", "'.$_POST['save'].'")'."'>Save</button><button onClick='".'noticeRequest("0", "")'."'>Cancel</button></div>";
+						echo "<div><button class='button' onClick='".'noticeRequest("5", "'.$_POST['save'].'")'."'>Save</button><button class='button' onClick='".'noticeRequest("0", "")'."'>Cancel</button></div>";
 					}
 					echo "</td></tr>";
 				}

@@ -62,11 +62,9 @@
 		</script>
 	</head>
 	<body onload="noticeRequest('0', '')">
-		<header>
 		<?php
 			include "header.php";
 		?>
-		</header>
 		<section class="dash">
 			<div class="noticeBoardControls">
 				<table>
@@ -77,9 +75,6 @@
 						<td class="noticeBoardc nopadding">
 							<button class='button' onClick="noticeRequest('1', 'new', '', '0');">New</button>
 							<button class='button' onClick="noticeRequest('0', '');">Refresh</button>
-						</td>
-						<td class="noticeBoardd">
-							<div id="noticespinner"></div>
 						</td>
 					</tr>
 				</table>

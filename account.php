@@ -19,8 +19,8 @@
 			include "header.php";
 		?>
 		<section class="account">
-			<h3>Your Account</h3>
-			<table>
+			<h2>Your Account</h2>
+			<table class="table account">
 				<tr>
 					<td>Username</td><td><?php echo $_SESSION["user"] ?></td>
 				</tr>

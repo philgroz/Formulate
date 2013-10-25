@@ -22,7 +22,7 @@ h1 {
 }
 h2 {
 	font-size:30px;
-	float:right;
+	margin: 20px 0px !important;
 }
 h3 {
 	font-size:20px;
@@ -100,8 +100,29 @@ input {
 	border: 1px solid #999999;
 }
 
-table {width:100%; border-collapse:collapse; }
-td {width:50%; border-collapse:collapse;}
+table {width: 100%; border-collapse:collapse;}
+.noticeBoardControls {
+	td {width:50%; border-collapse:collapse; text-align: left;}
+	td:last-child {text-align: right;}
+}
+table.table {
+	background: #f2f2f2;
+	border: 1px solid #dddddd;
+	font-size: 12px;
+	td {
+		padding: 12px;
+		background: #f2f2f2;
+	}
+}
+table.account.table {
+	td:first-child {
+		width: 15%;
+	}
+	td:last-child {
+		width: 85%;
+		font-size: 14px;
+	}
+}
 
 .newNotice {width:50%; padding:5px; font-size:15px; box-shadow:none; -moz-box-shadow:none; border:solid #dddddd 1px;}
 .noticeBoardt {width:15%; text-align:center;}
@@ -114,9 +135,9 @@ td {width:50%; border-collapse:collapse;}
 .notice div {float:right; margin-top:70px}
 .notice p {}
 .noticeHeaders {width:75%;}
-.noticeEditDelete {text-align:right;}
-.comment {padding:2px; padding-left:5px; margin:2px; border-left:5px solid #cccccc;}
-.comment:hover {border-left:5px solid #bbbbbb;}
+.noticeEditDelete {text-align:right; padding: 0px 10px;}
+section.comment {padding:2px; padding-left:5px; margin:2px; border-left:5px solid #cccccc;}
+section.comment:hover {border-left:5px solid #bbbbbb;}
 .comment p {margin:0px;}
 .commentButton {font-size:12px;}
 .nopadding {padding:0px; width:816px;}

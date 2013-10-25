@@ -66,6 +66,7 @@
 			include "header.php";
 		?>
 		<section class="dash">
+			<h2>Dashboard</h2>
 			<div class="noticeBoardControls">
 				<table>
 					<tr>
@@ -75,9 +76,6 @@
 						<td class="noticeBoardc nopadding">
 							<button class='button' onClick="noticeRequest('1', 'new', '', '0');">New</button>
 							<button class='button' onClick="noticeRequest('0', '');">Refresh</button>
-						</td>
-						<td class="noticeBoardd">
-							<div id="noticespinner"></div>
 						</td>
 					</tr>
 				</table>

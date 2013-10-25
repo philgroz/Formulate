@@ -136,7 +136,7 @@
 					if ($xml->author == $_SESSION['peep']){
 						echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 					}
-					echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+					echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 					echo "<p>".$xml->text."</p>";
 					writeComments($xml);
 					global $z;
@@ -193,7 +193,7 @@
 						if ($xml->author == $_SESSION['peep']){
 							echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 						}
-						echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+						echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 						echo "<p>".$xml->text."</p>";
 						writeComments($xml);
 						$z++;
@@ -247,7 +247,7 @@
 					if ($xml->author == $_SESSION['peep']){
 						echo "<p><a onClick='".'noticeRequest("1", "'.$xml->nin.'")'."'>edit</a>"." - "."<a onClick='sureDeleteNotice(".$xml->nin.")'>delete</a></p>";
 					}
-					echo "</td><td><button class='commentButton button' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
+					echo "</td><td><button class='commentButton button icon comment' onClick='".'noticeRequest("4", "'.$xml->nin.'")'."'>Comment</button></td></tr></table>";
 					echo "<p>".$xml->text."</p>";
 					$x = "0";
 					if ($xml->comments == "1"){

@@ -21,11 +21,9 @@
 		<title>Formulate | Sign In</title>
 	</head>
 	<body>
-		<header>
 		<?php
 			include "header.php";
 		?>
-		</header>
 		<section>
 			<div class="login">
 				<h3>Sign In</h3>
