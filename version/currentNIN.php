@@ -1,0 +1,1 @@
+<html><body><?php $NIN = 3; ?></body></html>
