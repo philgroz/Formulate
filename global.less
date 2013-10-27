@@ -73,11 +73,12 @@ section p {
 
 header {
 	margin: 0px;
-	padding: 10px;
-	position: absolute;
+	padding: 10px 0px;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width:100%;
+	z-index: 2;
 	background: #f2f2f2;
 	border-bottom: 1px solid #dddddd;
 	table {
@@ -98,7 +99,7 @@ header {
 		}
 		td:last-child {
 			text-align: right;
-			padding-right: 50px;
+			padding-right: 25px;
 		}
 	}
 }
@@ -169,14 +170,15 @@ input.editor-name {
 	font-weight: 100;
 	border: none;
 	width: 100%;
+	opacity: 0;
 }
 
 section.editor-controls {
 	margin: 0px;
-	padding: 10px;
-	position: absolute;
+	padding: 10px 0px;
+	position: fixed;
 	top: 58px;
-	z-index: -1;
+	z-index: 1;
 	left: 0px;
 	width:100%;
 	background: #f9f9f9;
@@ -203,10 +205,11 @@ section.editor-controls {
 		td:last-child {
 			text-align: right;
 			width: 33%;
-			padding-right: 25px;
 		}
 	}
 }
+
+
 
 .newNotice {width:50%; padding:5px; font-size:15px; box-shadow:none; -moz-box-shadow:none; border:solid #dddddd 1px;}
 .noticeBoardt {width:15%; text-align:center;}

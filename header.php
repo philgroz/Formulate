@@ -4,7 +4,7 @@
 			<tr>
 				<td>
 					<a href="index.php"><h1>Formulate</h1></a>
-					<a href="version-log.php"><span><i>v0.1.2-alpha</i></span></a>
+					<a href="version-log.php"><span><i>v0.2.1-alpha</i></span></a>
 				</td>
 				<td> 
 					<?php 
