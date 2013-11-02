@@ -27,7 +27,7 @@
 				return decodeURIComponent((new RegExp('[?|&]' + 'id' + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 			}
 			function save(){
-				var params = "top=" + document.getElementById('doc-top').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&title=<title>" + document.getElementById('editor-title').value + "</title>&mid=" + document.getElementById('t-mid').value + "&bottom=" + document.getElementById('doc-bottom').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&id=" + getCurrentId();
+				var params = "top=" + document.getElementById('doc-top').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&title=<title>" + document.getElementById('editor-title').value + "</title>&mid=" + document.getElementById('t-mid').value + "&bottom=" + document.getElementById('doc-bottom').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&id=" + getCurrentId() + "&name=" + document.getElementById('editor-title').value + "&author=" + "<?php if (isset($_GET["id"]) == false){echo $_SESSION["peep"];} ?>";
 				var request = $.ajax({
 					url: "save.php",
 					data: params.replace(/\&lt;/g, '<').replace(/\&gt;/g, '>').replace("  ", " ").replace("> ", ">").replace(" <", "<"),
