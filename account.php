@@ -28,10 +28,10 @@
 				<tr>
 					<td>Name</td><td><?php echo $_SESSION["peep"] ?></td>
 				</tr>
+				<tr>
+					<td>Password</td><td><a class="button danger icon lock" href="change-pass.php">Change Password</a></td>
+				</tr>
 			</table>
-		</section>
-		<section>
-			<a class="button danger icon lock" href="change-pass.php">Change Password</a>
 		</section>
 		<?php
 			include "footer.php";

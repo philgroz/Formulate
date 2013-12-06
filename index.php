@@ -68,7 +68,7 @@
 		<section class="dash">
 			<h2>Dashboard</h2>
 			<a href="editor.php" class="button icon add">New Article</a>
-			<a href="editor.php" class="button icon edit">Open Article</a>
+			<a href="open.php" class="button icon edit">Open Article</a>
 		</section>
 		<section>
 			<div class="noticeBoardControls">
