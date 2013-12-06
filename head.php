@@ -4,3 +4,20 @@
 <link rel="stylesheet" type="text/css" href="frameworks/gh-buttons.css" />
 <script src="frameworks/smoke.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="frameworks/smoke.css" />
+<script type="text/javascript">
+	function search(t, s, i){
+		var params = "type=" + t + "&s=" + s;
+		var request = $.ajax({
+			url: "search.php",
+			data: params,
+			dataType: 'html',
+			type: "POST"
+		});
+		request.done(function(result){
+			document.getElementById(i).innerHTML = result;
+		});
+	}
+	function openfromid(id){
+		window.location = "editor.php?id=" + id;
+	}
+</script>

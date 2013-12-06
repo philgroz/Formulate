@@ -27,7 +27,7 @@
 				return decodeURIComponent((new RegExp('[?|&]' + 'id' + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 			}
 			function save(){
-				var params = "top=" + document.getElementById('doc-top').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&title=<title>" + document.getElementById('editor-title').value + "</title>&mid=" + document.getElementById('t-mid').value + "&bottom=" + document.getElementById('doc-bottom').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&id=" + getCurrentId() + "&name=" + document.getElementById('editor-title').value + "&author=" + "<?php if (isset($_GET["id"]) == false){echo $_SESSION["peep"];} ?>";
+				var params = "top=" + document.getElementById('doc-top').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&title=<title>" + document.getElementById('editor-title').value + "</title>&mid=" + document.getElementById('t-mid').value + "&bottom=" + document.getElementById('doc-bottom').innerHTML.replace(/\s+/g, ' ').replace(/\<br\>/g, "") + "&id=" + getCurrentId() + "&name=" + document.getElementById('editor-title').value + "&author=" + "<?php if (isset($_GET["id"]) == false){echo $_SESSION["peep"];} ?>" + "&category=" + document.getElementById('category-select').value;
 				var request = $.ajax({
 					url: "save.php",
 					data: params.replace(/\&lt;/g, '<').replace(/\&gt;/g, '>').replace("  ", " ").replace("> ", ">").replace(" <", "<"),
@@ -95,6 +95,17 @@
 			</table>
 		</section>
 		<section>
+			<select class="" id="category-select" onchange="if (this.value == 'Manage Categories') {alert('hi');}"> <!-- Include code to redirect to category management page -->
+				<optgroup>
+				<?php 
+					$categories = mysqli_query($data_con, "SELECT name FROM categories");
+					while ($a = mysqli_fetch_assoc($categories)){
+						echo "<option>".$a['name']."</option>";
+					}
+				?>
+				</optgroup>
+				<option>Manage Categories</option>
+			</select>
 			<input placeholder="New Article" type="text" id="editor-title" class="editor-name" onkeyup='this.value = this.value.replace("<title>", "").replace("</title>", "");' value="<?php if (isset($_GET['id'])){echo $data["title"];} ?>" />
 			<table class="table">
 				<tr>
@@ -128,7 +139,7 @@
 		<section>
 			<?php
 				if (isset($_GET["id"])){
-					echo '<a href="" class="button icon trash danger">Delete this Article</a>';
+					echo '<a href="delete.php?id='.$_GET["id"].'" class="button icon trash danger">Delete this Article</a>';
 					mysqli_free_result($data);
 				}
 			?>
