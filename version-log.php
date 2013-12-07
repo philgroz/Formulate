@@ -79,8 +79,10 @@
 							<h3>Version Log</h3>
 						</td>
 						<td class="noticeBoardc nopadding">
-							<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Version</button>
-							<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
+							<div class="button-group">
+								<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Version</button>
+								<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
+							</div>
 						</td>
 					</tr>
 				</table>

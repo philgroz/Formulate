@@ -1,1 +1,1 @@
-<html><body><?php $NIN = 7; ?></body></html>
+<html><body><?php $NIN = 8; ?></body></html>

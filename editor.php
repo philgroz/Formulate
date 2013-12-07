@@ -95,8 +95,8 @@
 			</table>
 		</section>
 		<section>
-			<select class="" id="category-select" onchange="if (this.value == 'Manage Categories') {alert('hi');}"> <!-- Include code to redirect to category management page -->
-				<optgroup>
+			<select class="" id="category-select" onchange="if (this.value == 'Manage Categories') {window.location = 'categories.php';}"> <!-- Include code to redirect to category management page -->
+				<optgroup label="Categories">
 				<?php 
 					$categories = mysqli_query($data_con, "SELECT name FROM categories");
 					while ($a = mysqli_fetch_assoc($categories)){

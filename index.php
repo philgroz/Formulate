@@ -67,8 +67,10 @@
 		?>
 		<section class="dash">
 			<h2>Dashboard</h2>
-			<a href="editor.php" class="button icon add">New Article</a>
-			<a href="open.php" class="button icon edit">Open Article</a>
+			<div class="button-group">
+				<a href="editor.php" class="button icon add">New Article</a>
+				<a href="open.php" class="button icon edit">Open Article</a>
+			</div>
 		</section>
 		<section>
 			<div class="noticeBoardControls">
@@ -78,8 +80,10 @@
 							<h3>Noticeboard</h3>
 						</td>
 						<td class="noticeBoardc nopadding">
-							<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Post</button>
-							<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
+							<div class="button-group">
+								<button class='button icon add' onClick="noticeRequest('1', 'new', '', '0');">New Post</button>
+								<button class='button icon reload' onClick="noticeRequest('0', '');">Refresh</button>
+							</div>
 						</td>
 					</tr>
 				</table>
