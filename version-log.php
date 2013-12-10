@@ -1,7 +1,3 @@
-<!-- Copyright GRAPHITE 2013 -->
-<!-- Grozinger P -->
-<!-- Formulate v1.0 -->
-
 <?php
 	session_start();
 ?>

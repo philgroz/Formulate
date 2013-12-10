@@ -1,7 +1,3 @@
-<!-- Copyright GRAPHITE 2013 -->
-<!-- Grozinger P -->
-<!-- Formulate v1.0 -->
-
 <?php
 	session_start();
 ?>
@@ -34,9 +30,11 @@
 				while ($a = mysqli_fetch_assoc($categories)){
 					echo "<tr><td id='n-".$a["id"]."'>".$a['name']."</td><td id='d-".$a["id"]."'>".$a['description']."</td><td><div class='button-group'><button class='button icon edit' onclick='changeCategory(1, ".$a["id"].")'>Edit</button><button onclick='if (confirm(".'"Are you sure you want to delete this?"'.")) {changeCategory(3, ".$a["id"].");}' class='button icon danger trash'>Delete</button></div></td></tr>";
 				}
+				logThis("The category '".$_POST["name"]."' was successfully updated by ".$_SESSION["peep"].".");
 			}
 			else if ($_POST["type"] == 3){ // delete
 				if (mysqli_query($data_con, "DELETE FROM categories WHERE id='".$_POST["id"]."'")){
+					logThis("The category '".$_POST["name"]."' was successfully deleted by ".$_SESSION["peep"].".");
 					while ($a = mysqli_fetch_assoc($categories)){
 						if ($a["id"] != $_POST["id"]){
 							echo "<tr><td id='n-".$a["id"]."'>".$a['name']."</td><td id='d-".$a["id"]."'>".$a['description']."</td><td><div class='button-group'><button class='button icon edit' onclick='changeCategory(1, ".$a["id"].")'>Edit</button><button onclick='if (confirm(".'"Are you sure you want to delete this?"'.")) {changeCategory(3, ".$a["id"].");}' class='button icon danger trash'>Delete</button></div></td></tr>";
@@ -50,6 +48,7 @@
 					while ($a = mysqli_fetch_assoc($categories)){
 						echo "<tr><td id='n-".$a["id"]."'>".$a['name']."</td><td id='d-".$a["id"]."'>".$a['description']."</td><td><div class='button-group'><button class='button icon edit' onclick='changeCategory(1, ".$a["id"].")'>Edit</button><button onclick='if (confirm(".'"Are you sure you want to delete this?"'.")) {changeCategory(3, ".$a["id"].");}' class='button icon danger trash'>Delete</button></div></td></tr>";
 					}
+					logThis("The new category '".$_POST["name"]."' was successfully created by ".$_SESSION["peep"].".");
 				}
 			}
 			else { // all

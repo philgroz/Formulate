@@ -1,7 +1,3 @@
-<!-- Copyright GRAPHITE 2013 -->
-<!-- Grozinger P -->
-<!-- Formulate v1.0 -->
-
 <?php
 	session_start();
 ?>
@@ -43,7 +39,7 @@
 				echo "</table>";
 			}
 			else if ($_POST["type"] == 3){
-				$search = mysqli_query($data_con, "SELECT * FROM formulae ORDER BY formulae.id DESC LIMIT 10 ");
+				$search = mysqli_query($data_con, "SELECT * FROM formulae ORDER BY formulae.id DESC LIMIT 5 ");
 				echo '<p><i>Recently created articles</i></p><table class="table search">';
 				while ($item = mysqli_fetch_assoc($search)){
 					echo display($item, true);

@@ -152,7 +152,7 @@ table.account.table {
 textarea.editor {
 	background: transparent !important;
 	border: none !important;
-	height: 300px;
+	/* height: 300px; */
 	width: 100%;
 	-mox-appearance: none;
 	-webkit-appearance: none;
@@ -161,6 +161,7 @@ textarea.editor {
 	font-size: 12px;
 	color: #777777;
 	resize: none;
+	overflow: hidden;
 }
 *:focus {outline:0px none transparent;}
 
@@ -201,13 +202,19 @@ section.editor-controls {
 				margin: 3px 0px;
 			}
 		}
+		div {
+			margin: 0px;
+		}
 		td:first-child {
 			text-align: left;
-			width: 33%;
+			width: 40%;
+		}
+		td:nth-child(2) {
+			width: 20%;
 		}
 		td:last-child {
 			text-align: right;
-			width: 33%;
+			width: 40%;
 		}
 	}
 }

@@ -1,7 +1,3 @@
-<!-- Copyright GRAPHITE 2013 -->
-<!-- Grozinger P -->
-<!-- Formulate v1.0 -->
-
 <?php
 	session_start();
 ?>
@@ -61,15 +57,17 @@
 				}
 		</script>
 	</head>
-	<body onload="noticeRequest('0', '')">
+	<body onload="noticeRequest('0', '');">
 		<?php
 			include "header.php";
 		?>
 		<section class="dash">
 			<h2>Dashboard</h2>
+			<p>Welcome <?php echo $_SESSION["peep"]; ?></p>
 			<div class="button-group">
 				<a href="editor.php" class="button icon add">New Article</a>
 				<a href="open.php" class="button icon edit">Open Article</a>
+				<a href="categories.php" class="button icon settings">Manage Categories</a>
 			</div>
 		</section>
 		<section>

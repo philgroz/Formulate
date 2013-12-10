@@ -10,6 +10,9 @@
 				if ($opt){
 					$i = $i."<td><span class='icon'>".generateIcon($item)."</span></td>";
 				}
+				if ($item["name"] == ""){
+					$item["name"] = "<i>nameless</i>";
+				}
 				$i = $i."<td><span class='search time'>".convertTime($item["id"])."</span><span class='search title'><h3>".$item['name']."</h3></span><span class='search category'>".$item['category']."</span><span class='search author'>".$item["author"]."</span>";
 				return $i."</td></tr>";
 			}
@@ -24,6 +27,13 @@
 				}
 				else {
 					return "b";
+				}
+			}
+			$data_con = mysqli_connect("localhost", 'root', 'root', 'formulae');
+			function logThis($content){
+				global $data_con;
+				if (mysqli_query($data_con, "INSERT INTO log (content, time) VALUES ('".$content."', '".time()."')")){
+					return true;
 				}
 			}
 		}
